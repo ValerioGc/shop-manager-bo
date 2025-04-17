@@ -1,0 +1,82 @@
+@media (hover: hover) {
+    a:hover {
+        filter: brightness(0.9);
+    }
+}
+
+/*################## Slide ##################
+        * Slide in and out animation
+    */
+.slide-anim {
+    animation: slide 0.5s ease-in-out;
+}
+
+.slide-anim-reverse {
+    animation: slide 0.5s ease-in-out reverse;
+}
+
+@keyframes slide {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    99% {
+        max-height: 100px;
+        opacity: 1;
+    }
+
+    100% {
+        max-height: 100%;
+    }
+}
+
+/*################## Slide Alt ##################
+        * Slide in and out animation
+    */
+.slide-alt {
+    animation: slide-alt 0.4s linear;
+}
+
+.slide-alt-revs {
+    animation: slide-alt 0.4s linear reverse;
+}
+
+@keyframes slide-alt {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        max-height: 100%;
+        opacity: 1;
+    }
+}
+
+
+/* ################## Drop In ##################
+        * Drop in animation
+        * used in:
+        *    Views:
+        *       - FaqView.vue - Faq accordion entrance Animation
+    */
+.drop-in {
+    animation: dropIn 0.6s ease-out forwards;
+}
+
+.drop-in-reverse {
+    animation: dropIn 0.5s ease reverse;
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

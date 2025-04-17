@@ -1,0 +1,61 @@
+// /src/styles/partials/_vars.scss
+
+// ############################ Variables  ############################
+:root {
+
+    // *************** Color Palette ***************
+    --primary-color_c: #e2e2e2;
+    --primary-color_c_alt: #f1f1f1;
+    --secondary-color: #496ad4;
+    --secondary-color-light: #588ce6;
+    --secondary-color-dark: #2449c3;
+    --shadow-box-color: #c4c4c4;
+    --shadow-text-dark: #282828;
+    --shadow-text: #c4c4c4;
+    // standard
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    // danger
+    --danger_color: #a91826;
+    --danger_color_light: #f9d7da;
+    --danger_color_dark: #a31220;
+    // success
+    --success_color: #28a745;
+    --success_color-light: #4dbd74;
+
+    // *************** Spacing ***************
+    --btn_padding-x: 1rem;
+    --btn_padding-y: 1rem;
+
+    --btn_margin-x: 1rem;
+    --btn_margin-y: 1rem;
+
+    --border_sm: 0.1rem solid;
+    --border_md: 0.5rem solid;
+    --border_lg: 1rem solid;
+    --border_radius: 6px;
+
+    // *************** Font Sizes ***************
+    --standard_fs: 1rem;
+    --standard_fs_md: 1.1rem;
+    --standard_fs_lg: 1.2rem;
+    //  *************** Breakpoints ***************
+    --screen_size_xs: 350px;
+    --screen_size_sm: 420px;
+    --screen_size_smp: 580px;
+    --screen_size_md: 768px;
+    --screen_size_lg: 992px;
+    --screen_size_xl: 1200px;
+    --screen_size_xxl: 1600px;
+    // *************** Z-Index levels ***************
+    --z_bg: -1;
+    --z_1: 1;
+    --z_2: 2;
+    --z_3: 3;
+    --z_4: 4;
+    --z_5: 5;
+    --z_6: 6;
+    --z_6: 7;
+    --z_max: 8;
+}
+

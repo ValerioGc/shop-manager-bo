@@ -1,0 +1,96 @@
+@use "sass:map";
+
+/// Mixin to create a flex container with various alignments.
+/// 
+/// @param {String} $justify - Allignment of the elements along the main axis (e.g. `center`, `space-around`). Use `null` to not set.
+/// @param {String} $align - Allignment of the elements along the cross axis (e.g. `center`, `flex-start`). Use `null` to not set.
+/// @param {String} $direction - Direction of the flex (e.g. `row`, `column`). Use `null` to not set.
+/// @param {String} $wrap - Wrapping setting of the elements (e.g. `wrap`, `nowrap`). Use `null` to not set.
+/// @param {String} $gap - Spacing between the elements (e.g. `10px`, `1rem`). Use `null` to not set.
+@mixin flexmin($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: null) {
+    display: flex;
+
+    @if $justify !=null {
+        justify-content: $justify;
+    }
+
+    @if $align !=null {
+        align-items: $align;
+    }
+
+    @if $direction !=null {
+        flex-direction: $direction;
+    }
+
+    @if $wrap !=null {
+        flex-wrap: $wrap;
+    }
+
+    @if $gap !=null {
+        gap: $gap;
+    }
+}
+
+/// Mixin for the management of breakpoints.
+/// @param {String} $breakpoint - Breakpoint to manage (e.g. `xs` = 'px', `sm` ='420px', `md`='768px', `lg`='992px', `xl`, `xxl`).
+@mixin breakpoint($breakpoint) {
+    $breakpoints: (
+        'xs': 350px,
+        'sm': 420px,
+        'smp': 580px,
+        'md': 769px,
+        'lg': 992px,
+        'xl': 1200px,
+        'xxl': 1600px
+    );
+
+@if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+@else {
+    @error "The breakpoint `#{$breakpoint}` does not exist in the `breakpoints` map.";
+}
+}
+
+/// Mixin for the management of absolute positioning.
+///
+/// @param {String} $type - Type of alignment (e.g. `both`, `horizontal`, `vertical`).
+/// @param {Boolean} $transform - Flag for adding the transform.
+
+@mixin center($type: 'both', $position: 'absolute', $transform: 'true', $x: 50%, $y: 50%) {
+
+    @if $position =='absolute' {
+        position: absolute;
+    }
+
+    @else {
+        position: relative;
+    }
+
+    @if $type =='both' or $type =='hor' and $x !=0 {
+        left: $x;
+
+        @if $transform =='true' {
+            transform: translateX(-50%);
+        }
+    }
+
+    @if $type =='both' or $type =='vert' and $y !=0 {
+        top: $y;
+
+        @if $transform =='true' {
+            transform: translateY(-50%);
+        }
+    }
+
+}
+
+/// Mixin for the management of text alignment.
+@mixin capitalize_start {
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}

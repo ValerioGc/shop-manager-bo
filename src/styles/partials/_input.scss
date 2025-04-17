@@ -1,0 +1,175 @@
+.input_container {
+    margin-bottom: .75rem;
+}
+
+select {
+    word-wrap: normal;
+
+    &:focus-visible {
+        outline-offset: 0px;
+    }
+
+    &:not(:-internal-list-box) {
+        overflow: visible !important;
+    }
+}
+
+button,
+input,
+textarea,
+select {
+    text-transform: none;
+    margin: 0;
+}
+
+textarea,
+input[type="date"] {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.form_switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .125rem;
+    min-height: 1.5rem;
+    padding: 1rem 0 1rem 1.5em;
+
+    .form_check_input {
+        position: relative;
+        flex-shrink: 0;
+        height: 1.2rem;
+        width: 2.4rem;
+        margin-right: .45rem;
+        border: 1.5px solid #dee2e6;
+        border-radius: 2rem;
+        appearance: none;
+        background-color: #fff;
+        box-shadow: 0 0 6px -2px #0000001a;
+        transition: background-position .15s ease-in-out;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            display: block;
+            width: .85rem;
+            height: .85rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-115%, -50%);
+            border: .1px solid #a7a7a786;
+            border-radius: 50%;
+            background-color: #bfbfbf;
+            box-shadow: 0 0 6px -1px #0000001a;
+            transition: background-color .15s ease-in-out, transform .2s ease-in-out;
+        }
+
+        &:checked {
+            background-color: #1a75ff;
+            border-color: #0d6efd;
+
+            &:after {
+                transform: translate(15%, -50%);
+                background-color: #fff;
+                border-color: #5096ff;
+            }
+        }
+
+        &:focus {
+            border-color: #86b7fe;
+            box-shadow: 0 0 0 .25rem #0d6dfd2f;
+            outline: 0;
+        }
+    }
+
+    label,
+    .form_check_label {
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: .25px;
+    }
+}
+
+
+.form_select_wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .form_select {
+        width: 100%;
+        padding: .375rem 2.25rem .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        appearance: none;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: .375rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+        &:focus {
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 .15rem #0d6efd40;
+        }
+
+        &:focus+.icon {
+            background-image: url('@/assets/icons/arrows/caret-up.svg');
+        }
+    }
+
+    .icon {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: .75rem;
+        width: 18px;
+        height: 14px;
+        background-image: url('@/assets/icons/arrows/caret-down.svg');
+        filter: opacity(.7);
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        transform: translateY(-50%);
+        transition: background-image 0.2s ease-in-out, opacity 0s;
+    }
+}
+
+.input_radio {
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    height: 1.5rem;
+    width: 1.75em;
+    margin: auto;
+    align-content: center;
+    border-radius: 25%;
+    border: 1px solid #555;
+    background: content-box;
+    box-shadow: 0 0 12px -5px gray;
+    transition: .2s linear;
+
+    &:hover {
+        background-color: #bac7ff82;
+    }
+
+    &:checked {
+        border-color: var(--secondary-color-dark);
+        box-shadow: 0 0 12px -5px rgb(117, 123, 140);
+
+        &:after {
+            background-color: var(--secondary-color-light);
+            border-radius: 25%;
+            content: "";
+            margin: auto;
+            height: 70%;
+            width: 70%;
+            display: block;
+            border: .5px solid var(--secondary-color-dark);
+            box-shadow: 0 0 1px #808080;
+        }
+    }
+}

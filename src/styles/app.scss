@@ -1,0 +1,73 @@
+@use 'partials/_vars';
+@use 'partials/_buttons';
+@use 'partials/_keyframes';
+@use 'partials/_tables';
+@use 'partials/_pager';
+@use 'partials/_input';
+@use 'partials/_forms';
+@use 'partials/_scrollbar'; // usato in main, custom search bar, aside e input 
+
+// ############################ COMMON  ############################
+
+hr {
+  border: 0;
+  border-top: 1px solid rgb(33, 37, 41) !important;
+  color: #212529 !important;
+  margin: 1rem 0;
+  opacity: .25;
+}
+
+.d-none,
+.d_none {
+  display: none;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.linked_image_preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding-top: .5rem;
+}
+
+.img_thumbnail {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: .5px solid gray;
+  padding: .5px;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-box-color);
+
+  &:hover {
+    filter: brightness(0.9);
+    opacity: 0.9;
+    scale: 1.05;
+    box-shadow: 0 0 7px #3e3e51;
+  }
+}
+
+th,
+td,
+button,
+h1 {
+
+  span,
+  img,
+  a {
+    vertical-align: middle;
+  }
+}
+
+
+.translated_label_container {
+  margin-bottom: .75rem;
+  display: block;
+}

@@ -1,0 +1,8 @@
+@forward 'partials/_mixin'; // usato in quasi tutti i componenti
+@forward 'partials/_placeholders'; // usato in quasi tutti i componenti
+
+
+a,
+router-link {
+  text-decoration: none;
+}

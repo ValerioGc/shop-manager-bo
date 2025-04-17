@@ -1,0 +1,26 @@
+.form_partial_container {
+
+    textarea,
+    input {
+        border: 0.2px solid transparent;
+    }
+
+    &.error input,
+    &.error textarea,
+    &.error input:focus,
+    &.error select,
+    &.error select:focus,
+    &.error textarea:focus {
+        border: 0.2px solid rgb(179, 0, 0) !important;
+        box-shadow: 0 0 6px -1px rgba(195, 0, 0, 0.86) !important;
+    }
+}
+
+.error_message {
+    color: darkred;
+    font-weight: bold;
+    display: block;
+    letter-spacing: .5px;
+    font-size: 0.9rem;
+    margin-top: .85rem;
+}

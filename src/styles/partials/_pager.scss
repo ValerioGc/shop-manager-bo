@@ -1,0 +1,98 @@
+nav.pager_container {
+    margin: 2rem auto;
+
+    .pager {
+        padding-left: 0;
+        display: flex;
+        box-shadow: 0 0 6px -2px #0000001a;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+
+        .disabled {
+            cursor: not-allowed;
+        }
+
+        &.load_disabled {
+            opacity: 0.7;
+            cursor: progress !important;
+
+            li {
+                pointer-events: none;
+            }
+        }
+
+        .page_button_item {
+            padding: .75rem;
+            align-content: center;
+            background-color: #e0e0e0;
+
+            &:not(.disabled) {
+                cursor: pointer;
+            }
+
+            &:hover:not(.disabled) {
+                filter: brightness(0.9);
+            }
+
+            &.disabled .page_link {
+                pointer-events: none;
+                cursor: default;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-right: 0 !important;
+            }
+
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-left: 0 !important;
+            }
+
+            img {
+                display: block;
+                width: 1.1rem;
+                height: 1.1rem;
+                opacity: 0.65;
+            }
+        }
+
+        .page_button_item,
+        .page_item {
+            border: .1px solid #969696;
+            &.active {
+                border-color: var(--secondary-color-light);
+            }
+        }
+
+        .page_item {
+            background-color: #f0f0f0;
+        }
+
+        .page_link {
+            display: block;
+            padding: .5rem .45rem;
+            text-decoration: none;
+            height: 100%;
+
+            &:hover {
+                background-color: #273aa6ad;
+                color: #fff;
+            }
+
+            @media screen and (min-width: 580px) {
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}
+
+.active a {
+    background-color: var(--secondary-color)!important;
+    color: #fff;
+    font-weight: bold;
+}
