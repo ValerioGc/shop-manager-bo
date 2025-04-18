@@ -8,13 +8,13 @@
 </p>
 
 <p align="" id="description">
-Complete website for a Shop back officemade with vue 3 and TypeScript. It's a complete back office for managing a shop, creating products, managing categories and shows. It features a complete product management system, including the ability to create, edit and delete products. It also includes a category management system, allowing users to create and manage categories for their products. The website is fully responsive, ensuring that it looks great on all devices.
-The website is built using the latest web technologies, including Vue 3 and TypeScript, providing a modern and efficient development experience. The website is designed to be user-friendly and easy to navigate, making it accessible to users of all skill levels. The website is fully responsive, ensuring that it looks great on all devices.
-It features a dockerized environment for easy development and deployment, as well as a CI/CD pipeline for automated testing and deployment. The website is also integrated with Google Cloud Translation API for multilingual support, allowing users to easily translate the website into different languages. The website is built with security in mind, using best practices for authentication and authorization to protect user data. Overall, this website is a powerful and flexible solution for managing a shop back office, providing all the tools and features needed to run a successful online store.
+Complete website for a Shop back office made with vue 3 and TypeScript. It's a complete back office for managing a shop, creating products, managing categories and shows/exhibitions. It features a complete product management system, including the ability to create, edit and delete products. It also includes a category management system, allowing users to create and manage categories for their products. The website is fully responsive, ensuring that it looks great on all devices.
+The website is built using the latest web technologies, including Vue 3 and TypeScript, providing a modern and efficient development experience.
+It features a dockerized environment for easy development and deployment, as well as a CI/CD pipeline for automated testing and deployment. The website is also integrated with Google Cloud Translation API for multilingual support, allowing users to easily translate the website into different languages. The website is built with security in mind, using best practices for authentication and authorization to protect user data. Overall,
 
 <br/>
-</p>
 
+</p>
 ---
 
 ### 🗺️ Table of content
@@ -30,6 +30,7 @@ It features a dockerized environment for easy development and deployment, as wel
     > - [Google Cloud API](#cloudT)
 
 <br/> 
+
 <h2 id="desc">💻 Built with</h2>
 
 <p>Tecnologies and libraries used in this project:</p>
